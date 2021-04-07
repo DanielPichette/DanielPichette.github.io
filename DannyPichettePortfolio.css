@@ -1,30 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 *{
-    margin: 0;
+    margin: 0%;
     padding: 0;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
 }
-.mainGrid div:nth-child(even){
-    background-color: rgb(65, 65, 65);
-}
-.mainGrid div:nth-child(odd){
-    background-color: rgb(189, 189, 189);
+
+.stickySidebar{
+    display: grid;
+    position: fixed;
+    width: 25%;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    background: url(https://androidwalls.net/wp-content/uploads/2015/04/Vertical%20Black%20Wood%20Beams%20Android%20Wallpaper.jpg);
+    background-size: cover;
+    color: whitesmoke;
+    place-items: center;
+
 }
 
 .mainGrid{
     display: grid;
-    grid-template-columns: 5% 20% 70% 5%;
-    grid-template-rows: 1fr  1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:25% 75%;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: 
-    ". sb h ."
-    ". sb a ."
-    ". sb s ."
-    ". sb p ."
-    ". sb f ."
-    ". sb c .";
+    "sb h "
+    "sb a "
+    "sb s "
+    "sb p "
+    "sb f "
+    "sb c ";
+    grid-gap: 10px;
+    width: 100;
+    height: auto;
+}
+.mainGrid div{
+    border-radius: 5px;
 }
 
 .sidebar{
+
+    position:;
     grid-area: sb;
 }
+
 
 .home{
     grid-area: h;
@@ -32,19 +56,105 @@
 
 .aboutMe{
     grid-area: a;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr
+    grid-template-rows: 20px  auto 20px;
+    grid-template-areas:
+    " . . "
+    "paragraph photo"
+    " . . "
+    ;
+    text-align: center;
+    align-content: center;
+    place-items:center;
+    
 }
+
+
+.aboutMe article{
+    grid-area: paragraph;
+}
+
+.aboutMe img{
+    grid-area: photo;
+}
+
+
 
 .skills{
     grid-area: s;
+    display: grid;
+    grid-auto-columns:  1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto auto ;
+    grid-template-areas: 
+    " h2 h2 h2 h2"
+    "1fr 1fr 1fr 1fr"
+    "1fr 1fr 1fr 1fr";
+    grid-gap: 10px;
+    object-fit:scale-down;
+    place-items: center;
+}
+
+.skills h2{
+    grid-area: h2;
 }
 
 .projects{
     grid-area: p;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  auto 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "ph ph  ph"
+    "1fr 1fr 1fr"
+    "1fr 1fr 1fr"
+    "1fr 1fr 1fr"
+    "1fr 1fr 1fr";
+    grid-gap: 5px;
+    place-items: center;
+   
+    ;
 }
+
+
+.projectHeader{
+    display:grid;
+    grid-area: ph;
+    height: auto;
+    place-items: center;
+}
+
+.projects div{
+    display: grid;
+    width: 1fr;
+    height: 150px;
+    place-items: center;
+    }
+
+    .projectslist{
+        background: url(https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+        background-size:cover;
+        background-attachment: fixed;
+        place-items: center;
+
+    }
+
 .faq{
     grid-area: f;
 }
 
 .contact{
     grid-area: c;
+}
+
+.greens{
+    background: url(https://images.pexels.com/photos/5947856/pexels-photo-5947856.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-size: contain;
+    background-attachment: fixed;
+    color: whitesmoke;
+}
+
+#sbIcon{
+    shape-image-threshold: auto;
 }
