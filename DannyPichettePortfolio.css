@@ -1,1 +1,50 @@
-dfgdfg≈
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainGrid div:nth-child(even){
+    background-color: rgb(65, 65, 65);
+}
+.mainGrid div:nth-child(odd){
+    background-color: rgb(189, 189, 189);
+}
+
+.mainGrid{
+    display: grid;
+    grid-template-columns: 5% 20% 70% 5%;
+    grid-template-rows: 1fr  1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". sb h ."
+    ". sb a ."
+    ". sb s ."
+    ". sb p ."
+    ". sb f ."
+    ". sb c .";
+}
+
+.sidebar{
+    grid-area: sb;
+}
+
+.home{
+    grid-area: h;
+}
+
+.aboutMe{
+    grid-area: a;
+}
+
+.skills{
+    grid-area: s;
+}
+
+.projects{
+    grid-area: p;
+}
+.faq{
+    grid-area: f;
+}
+
+.contact{
+    grid-area: c;
+}
