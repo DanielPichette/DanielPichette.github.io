@@ -18,18 +18,30 @@
     left: 0%;
     bottom: 0%;
     background: url(https://androidwalls.net/wp-content/uploads/2015/04/Vertical%20Black%20Wood%20Beams%20Android%20Wallpaper.jpg);
-    background-size: cover;
+    background-size: contain;
     color: whitesmoke;
     place-items: center;
+    grid-template-rows: 1fr 1fr 1fr 4fr 4fr;
+    
+}
+
+.stickySidebar a{
+    display: block;
+    color: whitesmoke;
+    border-style: solid;
+    text-decoration: none;
+    text-size-adjust: contain;
+    justify-self: contain;
+    
 
 }
 
 .mainGrid{
     display: grid;
     grid-template-columns:25% 75%;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
-    "sb h "
+    
     "sb a "
     "sb s "
     "sb p "
@@ -86,7 +98,7 @@
     grid-area: s;
     display: grid;
     grid-auto-columns:  1fr 1fr 1fr 1fr ;
-    grid-template-rows: auto auto ;
+    grid-template-rows: 1fr 2fr 2fr;
     grid-template-areas: 
     " h2 h2 h2 h2"
     "1fr 1fr 1fr 1fr"
@@ -142,11 +154,69 @@
 
 .faq{
     grid-area: f;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 3fr;
+    grid-template-areas: 
+    "fh fh"
+    "fask fask"
+    "fh2 aH"
+    "q asr"
+    
+    ;
+}
+
+.faqHeader{
+    grid-area: fh;
+}
+
+.ask{
+    display: grid;
+    grid-area: fask;
+    text-decoration: border;
+    place-items: center;
+    border-style: solid;
+}
+.faqH2{
+    grid-area: fh2;
+    text-decoration: underline;
+}
+.andswersHeader{
+    grid-area: aH;
+    text-decoration: underline;
+}
+
+.questions{
+    grid-area: q;
+
+}
+
+.answers{
+    grid-area: asr;
+
 }
 
 .contact{
     grid-area: c;
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 3fr 1fr;
+    grid-template-areas: 
+    "ch ch ch ch"
+    "1fr 1fr 1fr 1fr"
+    ;
+    grid-gap: 10px;
+color: whitesmoke;}
+
+.contact a{
+    color: whitesmoke;
+    text-decoration: none;
 }
+
+.contact h2{
+    grid-area: ch;
+}
+
 
 .greens{
     background: url(https://images.pexels.com/photos/5947856/pexels-photo-5947856.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
@@ -158,3 +228,4 @@
 #sbIcon{
     shape-image-threshold: auto;
 }
+
